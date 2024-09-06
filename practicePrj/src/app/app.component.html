@@ -1,0 +1,33 @@
+<div class="container">
+  <h1>User Registration</h1>
+  <form #registrationForm="ngForm" (ngSubmit)="registerUser()" novalidate>
+    <!-- Email field -->
+    <div>
+      <label for="email">Email:</label>
+      <input id="email" type="email" [(ngModel)]="user.email" name="email">
+    </div>
+
+    <!-- Password field -->
+    <div>
+      <label for="password">Password:</label>
+      <input id="password" type="password" [(ngModel)]="user.password" name="password">
+    </div>
+
+    <!-- Mobile number field -->
+    <div>
+      <label for="mobile">Mobile:</label>
+      <input id="mobile" type="text" [(ngModel)]="user.mobile" name="mobile">
+    </div>
+
+    <!-- Submit button -->
+    <button type="submit">Register</button>
+  </form>
+
+  <hr>
+
+  <!-- Display entered data -->
+  <h2>Entered Data:</h2>
+  <p>Email: {{ user.email }}</p>
+  <p>Password: {{ user.password }}</p>
+  <p>Mobile: {{ user.mobile }}</p>
+</div>

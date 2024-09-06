@@ -1,0 +1,14 @@
+h1{
+    text-align: center;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adjust this value to control space between components */
+  }
+  
+  .mat-form-field {
+    margin: 0; /* Reset default margins if needed */
+  }
+  

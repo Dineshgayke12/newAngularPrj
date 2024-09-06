@@ -1,0 +1,44 @@
+<h1>ngIf Directives</h1>
+<p>ifexample works!</p>
+<hr>
+
+<!-- Angular event binding for show/hide toggle -->
+<button (click)="show = !show">
+    {{ show ? 'hide' : 'show' }}
+  </button>
+  show={{ show }}
+  <br>
+  <div *ngIf="show; else elseBlock">
+    Text to show
+  </div>
+
+<h1>ngFor Example</h1>
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Genre</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Corrected ngFor syntax -->
+            <tr *ngFor="let book of books">
+                <td>{{ book.title }}</td>
+                <td>{{ book.genre }}</td> <!-- Match case with the data in the component -->
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <!-- <button (click)=addNumbers()=sum>Sum
+        {{ addNumbers()}}
+    </button> -->
+
+    <button (click)="calculateSum()">Calculate Sum</button>
+    <p>Sum: {{ sum }}</p>
+</div>
+
+
+
+
+<ng-template #elseBlock>Original text is hidden</ng-template>

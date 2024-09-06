@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prj1_05Sep</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <title>Myprj</title>
+  </head>
+  
+
+<body class="wall">
+     <h1 style="text-align: center;">My Angular</h1>
+     <hr>
+
+     <div ng-app="" ng-init="prjname='Angular Project'">
+      <p>{{prjname}} is the topic of the day</p>
+      <hr>
+      <p>enter your name
+        <input type="text" ng-model="prjname">
+      </p>
+
+      <p><span ng-bind="name">{{name}} </span></p>
+
+      <myhello></myhello>
+
+     <!-- <app-myhello></app-myhello> -->
+     </div>
+</body>
+</html>

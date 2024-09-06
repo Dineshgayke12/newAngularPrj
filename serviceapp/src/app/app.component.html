@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Books</title>
+</head>
+<body>
+  <div>
+    <h1>List of Books</h1>
+    <hr>
+    <h4>BookService used to fetch books</h4>
+    <button (click)="getBooks()">Display Books</button>
+
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Corrected *ngFor directive syntax -->
+          <tr *ngFor="let book of books">
+            <td>{{ book.bookId }}</td> 
+            <td>{{ book.title }}</td>
+            <td>{{ book.price }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
